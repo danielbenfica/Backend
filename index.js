@@ -6,6 +6,10 @@ app.get('/', (req, res) => {
   res.send("Hello World")
 })
 
+app.get('/mesa/caneta', (req, res) => {
+  res.send("Escrever no papel")
+})
+
 app.listen(port, () => {
   console.log("App running")
 })

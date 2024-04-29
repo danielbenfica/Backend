@@ -11,7 +11,10 @@ const conn = require("./db/conn")
 conn();
 
 const routes = require("./routes/router")
-app.use("/auth", routes)
+// app.use("/auth", routes)
+app.use("/auth", (req, res) => {
+  res.send("hello world")
+})
 
 
 app.listen(3000, function() {
